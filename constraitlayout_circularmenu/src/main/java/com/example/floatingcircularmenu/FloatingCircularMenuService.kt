@@ -8,6 +8,7 @@ import android.app.NotificationManager
 import android.app.Service
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.PixelFormat
 import android.graphics.Rect
 import android.os.Build
@@ -209,7 +210,7 @@ class FloatingCircularMenuService : Service(), FloatingViewListener {
             circularMenuParams!!.x = if (!isMoveToEdge) {
                 if (isRTL()) xPosition - circularMenuParams!!.width + actionButtonSize else xPosition
             } else {
-                if (isRTL()) metrics.widthPixels - circularMenuParams!!.width + overMargin else -overMargin
+                if (isRTL()) getScreenWidth() - circularMenuParams!!.width + overMargin else -overMargin
             }
 
             circularMenuParams!!.y = yPosition + (actionButton.height - circularMenuParams!!.height) / 2
@@ -308,6 +309,12 @@ class FloatingCircularMenuService : Service(), FloatingViewListener {
     }
 
     private fun isRTL() = xPosition > metrics.widthPixels / 2
+
+    private fun getScreenWidth() =
+        if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE)
+            metrics.heightPixels
+        else
+            metrics.widthPixels
 
     private inner class FloatingButtonTouchListener : View.OnTouchListener {
         @SuppressLint("ClickableViewAccessibility")
