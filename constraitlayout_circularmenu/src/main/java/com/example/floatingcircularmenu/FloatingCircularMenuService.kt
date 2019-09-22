@@ -109,9 +109,11 @@ class FloatingCircularMenuService : Service(), FloatingViewListener {
                 overMargin = this@FloatingCircularMenuService.overMargin
                 floatingViewX = metrics.widthPixels - actionButtonSize - radius + overMargin
                 floatingViewY = (metrics.heightPixels - actionButtonSize) / 2
+                isTrashViewEnabled = false
+                setDisplayMode(FloatingViewManager.DISPLAY_MODE_SHOW_ALWAYS)
             }
 
-            addViewToWindow(actionButton, options, true)
+            addViewToWindow(actionButton, options)
         }
     }
 

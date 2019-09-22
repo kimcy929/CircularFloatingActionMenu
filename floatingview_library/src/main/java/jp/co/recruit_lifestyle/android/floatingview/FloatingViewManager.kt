@@ -420,7 +420,7 @@ class FloatingViewManager
      * @param options Options
      */
     @SuppressLint("ClickableViewAccessibility")
-    fun addViewToWindow(view: View, options: Options, isEnableTrashView: Boolean = true) {
+    fun addViewToWindow(view: View, options: Options) {
         val isFirstAttach = mFloatingViewList.isEmpty()
         // FloatingView
         val floatingView = FloatingView(mContext)
@@ -458,7 +458,6 @@ class FloatingViewManager
         }
         // 必ずトップに来て欲しいので毎回貼り付け
         mWindowManager.addView(mTrashView, mTrashView.windowLayoutParams)
-        mTrashView.isTrashEnabled = isEnableTrashView
     }
 
     /**
