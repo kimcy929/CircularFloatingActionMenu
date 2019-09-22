@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+    </style>
+
+    <style name="CircleButtonStyle">
+        <item name="android:layout_width">@dimen/floating_icon_size</item>
+        <item name="android:layout_height">@dimen/floating_icon_size</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@drawable/circle_bg</item>
+        <item name="tint">@android:color/white</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:outlineProvider">paddedBounds</item>
+    </style>
+
+</resources>

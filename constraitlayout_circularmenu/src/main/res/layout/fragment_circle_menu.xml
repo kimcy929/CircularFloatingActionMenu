@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RTL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_add_black_24dp"
+        android:text="Button"
+        app:fabCustomSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_android_black_24dp"
+        android:text="Button2"
+        android:visibility="gone"
+        app:fabCustomSize="30dp"
+        app:layout_constraintCircle="@+id/btnClose"
+        app:layout_constraintCircleAngle="15"
+        app:layout_constraintCircleRadius="0dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_videocam_black_24dp"
+        android:text="Button3"
+        android:visibility="gone"
+        app:fabCustomSize="30dp"
+        app:layout_constraintCircle="@+id/btnClose"
+        app:layout_constraintCircleAngle="65"
+        app:layout_constraintCircleRadius="0dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_build_black_24dp"
+        android:text="Button4"
+        android:visibility="gone"
+        app:fabCustomSize="30dp"
+        app:layout_constraintCircle="@+id/btnClose"
+        app:layout_constraintCircleAngle="115"
+        app:layout_constraintCircleRadius="0dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_beach_access_black_24dp"
+        android:text="Button4"
+        android:visibility="gone"
+        app:fabCustomSize="30dp"
+        app:layout_constraintCircle="@+id/btnClose"
+        app:layout_constraintCircleAngle="165"
+        app:layout_constraintCircleRadius="0dp"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
